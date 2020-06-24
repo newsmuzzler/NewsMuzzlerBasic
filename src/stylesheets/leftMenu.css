@@ -77,7 +77,8 @@
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
-    line-height: 28px;
+    line-height: 20px;
+    height: 20px;
 
     display: flex;
     align-items: center;
@@ -98,6 +99,7 @@
     text-align: center;
 
     color: #FFFFFF;
+    transition: color .5s;
 }
 
 .leftMenu-row {
@@ -113,7 +115,7 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    padding: 20%;
+    padding: 15%;
 }
 
 .leftMenu-col-2 {width: 30%}
