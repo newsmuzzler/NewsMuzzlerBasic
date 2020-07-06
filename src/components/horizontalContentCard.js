@@ -37,14 +37,15 @@ function HorizontalContentCard(props) {
                 background={"#FFFFFF"}
                 boxShadow={"0px 1px 4px rgba(0, 0, 0, 0.16), 0px 0px 2px rgba(0, 0, 0, 0.08)"}
                 borderRadius={"2px"}
-                margin={"0% 2% 2% 2%"}
-                height={"160px"}
+                margin={show ? "0% 2% 0.5% 2%" : "0% 2% 2% 2%"}
+                height={"10%"}
                 width="96%"
                 onClick={handleClickHCard}
             >
-                <LazyLoad>
+                {show ? <></> : <LazyLoad>
                     <img src={props.imageUrl} alt={props.imageAlt} style={{width:"260px", height:"160px"}}/>
-                </LazyLoad>
+                </LazyLoad>}
+
 
                 <Box padding="2" paddingLeft={"4"} width="70%">
                     <Box
@@ -59,7 +60,7 @@ function HorizontalContentCard(props) {
                         {props.title}
                     </Box>
 
-                    <Box display="flex" alignItems="baseline">
+                    <Box  alignItems="baseline">
                         <Box
                             color={"#595959"}
                             fontWeight="semibold"
@@ -72,29 +73,39 @@ function HorizontalContentCard(props) {
                         </Box>
                     </Box>
 
-                    <Box>
+                    <Box display={show ? "none" : "block"}>
                         <Box as="span" color={"#8C8C8C"} fontSize="sm">
                             {props.publishedDate} &bull; {props.timeToRead} minute read
                         </Box>
                     </Box>
 
-                    <Box display="flex" alignItems="center">
+                    <Box display={show ? "none" : "flex"} alignItems="center">
                         <Box as="span" color={"#595959"} fontSize="sm">
                             {props.contentPreview}
                         </Box>
                     </Box>
                 </Box>
             </Flex>
-
-            <Collapse mt={4} isOpen={show}>
-                <ContentDetail />
-                <IconButton aria-label={"triangle-up"} icon="triangle-up"
-                            isRound={"true"}
-                            position="fixed" bottom={"0"} right={"20%"}
-                            backgroundColor={"rgba(52, 52, 52, 0.8)"}
-                            onClick={closeOrOpenCard}
-                />
+            <Collapse isOpen={show} duration="10">
+                <Box
+                    rounded="lg"
+                    overflow="hidden"
+                    background={"#FFFFFF"}
+                    boxShadow={"0px 1px 4px rgba(0, 0, 0, 0.16), 0px 0px 2px rgba(0, 0, 0, 0.08)"}
+                    borderRadius={"2px"}
+                    margin={"0% 2% 2% 2%"}
+                    width="96%"
+                >
+                    <ContentDetail />
+                    <IconButton aria-label={"triangle-up"} icon="triangle-up"
+                                isRound={"true"}
+                                position="fixed" bottom={"0"} right={"20%"}
+                                backgroundColor={"rgba(52, 52, 52, 0.8)"}
+                                onClick={closeOrOpenCard}
+                    />
+                </Box>
             </Collapse>
+
         </ThemeProvider>
     );
 }

@@ -9,7 +9,7 @@ export default class contentPage extends React.Component {
 
     render() {
         return (
-                <Box id={"mainPage"} width={'100%'} backgroundColor={"#E5E5E5"} transition="width 1s">
+                <Box id={"mainPage"} width={'100%'} backgroundColor={"#F2F2F2"} transition="width 1s">
                     <SimpleGrid columns={2} gridTemplateColumns={'80% 20%'}>
                         <Stack>
                             {
