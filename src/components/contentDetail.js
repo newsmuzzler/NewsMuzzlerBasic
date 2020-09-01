@@ -100,8 +100,8 @@ export default class ContentDetail extends React.Component {
                             <Box >
                                 <Popover>
                                     <PopoverTrigger>
-                                        <Box className={'contentDetail-IconBox'}>
-                                            <Icon className={'contentDetail-Icon'} name={'copy'} />
+                                        <Box className={'contentDetail-IconBox'} alignItems={"center"}>
+                                            <Icon className={'contentDetail-Icon'} name={'copy'} margin={"auto"}/>
                                         </Box>
                                     </PopoverTrigger>
                                     <PopoverContent zIndex={4}>
@@ -116,7 +116,7 @@ export default class ContentDetail extends React.Component {
                                 <Popover>
                                     <PopoverTrigger>
                                         <Box className={'contentDetail-IconBox'}>
-                                            <Icon className={'contentDetail-Icon'} name={'email'} />
+                                            <Icon className={'contentDetail-Icon'} name={'email'} margin={"auto"}/>
                                         </Box>
                                     </PopoverTrigger>
                                     <PopoverContent zIndex={4}>
@@ -139,7 +139,7 @@ export default class ContentDetail extends React.Component {
                                         <PopoverArrow />
                                         <PopoverCloseButton />
                                         <PopoverHeader>Facebook</PopoverHeader>
-                                        <PopoverBody>The content has been copied!</PopoverBody>
+                                        <PopoverBody>The content will be shared in your Facebook.</PopoverBody>
                                     </PopoverContent>
                                 </Popover>
                             </Box>
@@ -154,8 +154,8 @@ export default class ContentDetail extends React.Component {
                                     <PopoverContent zIndex={4}>
                                         <PopoverArrow />
                                         <PopoverCloseButton />
-                                        <PopoverHeader>Facebook</PopoverHeader>
-                                        <PopoverBody>The content has been copied!</PopoverBody>
+                                        <PopoverHeader>Linkedin</PopoverHeader>
+                                        <PopoverBody>The content will be shared in your Linkedin.</PopoverBody>
                                     </PopoverContent>
                                 </Popover>
                             </Box>
@@ -170,8 +170,8 @@ export default class ContentDetail extends React.Component {
                                     <PopoverContent zIndex={4}>
                                         <PopoverArrow />
                                         <PopoverCloseButton />
-                                        <PopoverHeader>Facebook</PopoverHeader>
-                                        <PopoverBody>The content has been copied!</PopoverBody>
+                                        <PopoverHeader>Twitter</PopoverHeader>
+                                        <PopoverBody>The content will be shared in your Twitter.</PopoverBody>
                                     </PopoverContent>
                                 </Popover>
                             </Box>
